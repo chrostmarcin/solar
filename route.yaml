@@ -3,7 +3,6 @@ kind: Route
 metadata:
    labels:
     app: solar-system
-    app.kubernetes.io/instance: solar
   name: solar-system-service
   namespace: solar
 spec:
