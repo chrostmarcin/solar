@@ -13,4 +13,3 @@ spec:
     name: solar-system-service
     weight: 100
   wildcardPolicy: None
-
