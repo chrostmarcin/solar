@@ -11,7 +11,7 @@ spec:
   port:
     targetPort: 80
   to:
-    kind: "service"
+    kind: "Service"
     name: solar-system-service
     weight: null
 status: {}
