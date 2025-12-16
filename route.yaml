@@ -16,12 +16,3 @@ spec:
     weight: 100
   wildcardPolicy: None
 status:
-  ingress:
-  - conditions:
-    - lastTransitionTime: "2025-12-15T21:21:51Z"
-      status: "True"
-      type: Admitted
-    host: solar-system-service-solar.apps-crc.testing
-    routerCanonicalHostname: router-default.apps-crc.testing
-    routerName: default
-    wildcardPolicy: None
