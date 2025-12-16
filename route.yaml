@@ -1,0 +1,27 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+   labels:
+    app: solar-system
+    app.kubernetes.io/instance: solar
+  name: solar-system-service
+  namespace: solar
+spec:
+  host: solar-system-service-solar.apps-crc.testing
+  port:
+    targetPort: 80
+  to:
+    kind: Service
+    name: solar-system-service
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2025-12-15T21:21:51Z"
+      status: "True"
+      type: Admitted
+    host: solar-system-service-solar.apps-crc.testing
+    routerCanonicalHostname: router-default.apps-crc.testing
+    routerName: default
+    wildcardPolicy: None
