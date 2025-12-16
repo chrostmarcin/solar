@@ -1,17 +1,16 @@
-apiVersion: v1
-kind: Service
+apiVersion: route.openshift.io/v1
+kind: Route
 metadata:
+  creationTimestamp: null
   labels:
     app: solar-system
     app.kubernetes.io/instance: solar
-  name: solar-system
+  name: solar-system-service
   namespace: solar
 spec:
-  ports:
-  - port: 80
-    protocol: TCP
+  port:
     targetPort: 80
-  selector:
-    app: solar-system
-status:
-  loadBalancer: {}
+  to:
+    kind: ""
+    name: solar-system-service
+
